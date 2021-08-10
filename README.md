@@ -1,4 +1,5 @@
 # AntiScalpingSystem 
 
-Developed a concept solution to the one of the biggest problems in the tech industry, scalpers. 
-Application stores just the encrypted credit card number in an Azure SQL Server, and this application can be implemented by any online retailer as an additinal step in the payment process, where the inputted credit card info will be checked againt the data base, and if the credit card has been recently used to purchase the product in the last x amount of time the transaction will not go through.
+* Developed a concept solution to the one of the biggest problems in the tech industry, scalpers. 
+* Application stores just the encrypted credit card numbers in an Azure SQL Server, and this application can be implemented by any online retailer as an additinal step in the      payment process
+* When someone makes a purchase there credit number is encrypted and storeed in the database, along with the transcation item and time and when person tries to purchase item again there infromation is checked against the databse to determine if the payment method has already been used.

@@ -16,7 +16,7 @@ fernet = Fernet(key)
 db = pyodbc.connect('DRIVER='+driver+';SERVER=tcp:'+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = db.cursor()
 
-# #create the database table
+#create the database table
 # cursor.execute("CREATE TABLE TRANSACTIONDATA (upc VARCHAR(12) NOT NULL, cc_number NVARCHAR(1000) NOT NULL, transaction_date DATE NOT NULL, PRIMARY KEY(cc_number));")
 
 

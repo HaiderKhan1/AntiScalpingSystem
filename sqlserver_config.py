@@ -25,7 +25,6 @@ for i in range(0,100):
     upc = str(random.randint(100000000000,999999999999))
     cc = str(random.randint(1000000000000000,9999999999999999))
     cc_encrypted = fernet.encrypt(cc.encode())
-    
     #prepare credit card number to be pushed to the database
     char_cc = list(cc_encrypted.decode())
     char_cc.insert(0,"'")

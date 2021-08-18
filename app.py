@@ -10,7 +10,7 @@ fernet = Fernet(key)
 server = 'personalprojectdb.database.windows.net'
 database = 'AntiScalpingSystemDB'
 username = 'Haider'
-password = '{786Admin}'   
+password = '{}'   
 driver= '{ODBC Driver 17 for SQL Server}'
 
 #initalize database

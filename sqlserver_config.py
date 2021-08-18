@@ -5,7 +5,7 @@ from cryptography.fernet import Fernet
 server = 'personalprojectdb.database.windows.net'
 database = 'AntiScalpingSystemDB'
 username = 'Haider'
-password = '{786Admin}'   
+password = '{}'   
 driver= '{ODBC Driver 17 for SQL Server}'
 
 # initalize the cryptography library
@@ -19,12 +19,12 @@ cursor = db.cursor()
 #create the database table
 # cursor.execute("CREATE TABLE TRANSACTIONDATA (upc VARCHAR(12) NOT NULL, cc_number NVARCHAR(1000) NOT NULL, transaction_date DATE NOT NULL, PRIMARY KEY(cc_number));")
 
-
 for i in range(0,100):
     #generate random upc and cc
     upc = str(random.randint(100000000000,999999999999))
     cc = str(random.randint(1000000000000000,9999999999999999))
     cc_encrypted = fernet.encrypt(cc.encode())
+    
     #prepare credit card number to be pushed to the database
     char_cc = list(cc_encrypted.decode())
     char_cc.insert(0,"'")
